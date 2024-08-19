@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('https://ada-site-frontend.s3.sa-east-1.amazonaws.com/home/Thumb-Ada.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#container {
+    background-color: rgba(53, 92, 53, 0.8);
+    color: rgb(114, 212, 1);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(8, 88, 8, 0.5);
+}
+
+
+    
