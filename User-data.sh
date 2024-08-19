@@ -1,37 +1,34 @@
-# !/bin/bash
+#!/bin/bash
 
-yum update - y
+# Atualizando o sistema
+yum update -y
 
 # Instalando o Apache
 yum install -y httpd
 
-# Criando pagina HTML no diretorio '/var/www/html/'
+# Criando a página HTML no diretório '/var/www/html/'
 cat << EOF > /var/www/html/index.html
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servidor Web </title>
-    <link rel="stylesheet" href="styles.css" >
+    <title>Servidor Web</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container" id="container">
-        <h1>
-            Bem-vindo ao Servidor Web 
-        </h1>
-        <h2> 
-            Esta é página HTML referente à atividade de Projeto 03 do módulo 1 do curso de DevOps
-            do Santander Coders.
-            <br>
-
-            Aluno : Caio Jordan Oliveira de Siqueira
+        <h1>Bem-vindo ao Servidor Web</h1>
+        <h2>
+            Esta é a página HTML referente à atividade de Projeto 03 do módulo 1 do curso de DevOps
+            do Santander Coders.<br>
+            Aluno: Caio Jordan Oliveira de Siqueira
         </h2>
         <h3>
             Este servidor está sendo executado em uma instância Amazon Linux
             configurada automaticamente via User Data utilizando servidor Apache.
         </h3>
-        
+    </div>
 </body>
 </html>
 EOF
@@ -59,6 +56,6 @@ body {
 }
 EOF
 
-# Iniciando o Apache
+# Habilitando e iniciando o Apache
+systemctl enable httpd
 systemctl start httpd
-system enable httpd
